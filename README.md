@@ -1,50 +1,89 @@
-# Welcome to your Expo app 👋
+# Shopping List — Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform mobile shopping list app built with React Native and Expo. The mobile counterpart to the [web version](https://ismail-jibrin.vercel.app/shopping), rebuilt natively for Android and iOS with persistent storage and global state management.
 
-## Get started
+---
 
-1. Install dependencies
+## Features
 
-   ```bash
-   npm install
-   ```
+- Add, edit, and delete shopping items (full CRUD)
+- Check off items as you shop
+- Persistent storage with AsyncStorage — data survives app restarts
+- Global state management with Zustand
+- Clean, responsive UI styled with NativeWind (Tailwind CSS for React Native)
+- Works on Android and iOS via Expo Go
 
-2. Start the app
+---
 
-   ```bash
-   npx expo start
-   ```
+## Tech Stack
 
-In the output, you'll find options to open the app in a
+| Tool | Purpose |
+|---|---|
+| [Expo](https://expo.dev) | React Native framework and tooling |
+| [Zustand](https://zustand-demo.pmnd.rs) | Lightweight global state management |
+| [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) | Persistent local storage |
+| [NativeWind](https://www.nativewind.dev) | Tailwind CSS utility classes for React Native |
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## Getting Started
 
-## Get a fresh project
+### Prerequisites
+- Node.js 18+
+- Expo CLI — `npm install -g expo-cli`
+- Expo Go app on your phone ([Android](https://play.google.com/store/apps/details?id=host.exp.exponent) / [iOS](https://apps.apple.com/app/expo-go/id982107779))
 
-When you're ready, run:
+### Installation
 
 ```bash
-npm run reset-project
+# Clone the repo
+git clone https://github.com/your-username/shopping-list-mobile.git
+
+# Navigate into the project
+cd shopping-list-mobile
+
+# Install dependencies
+npm install
+
+# Start the development server
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Then scan the QR code with Expo Go on your phone.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## Project Structure
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```
+shopping-list-mobile/
+├── app/
+│   ├── index.tsx              # Main screen
+│   └── _layout.tsx            # Root layout and navigation
+├── components/
+│   ├── AddItemModal.tsx        # Modal for adding new items
+│   ├── ConfirmClearModal.tsx   # Modal for clearing the list
+│   ├── ThemeToggle.tsx         # Light/dark mode toggle
+│   └── ui/                    # Base UI primitives
+├── store/
+│   └── useShoppingStore.ts    # Zustand store — state and actions
+├── constants/
+│   └── theme.ts               # Theme constants
+├── hooks/                     # Custom hooks (color scheme, theming)
+├── assets/                    # App icons and images
+└── app.json                   # Expo config
+```
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## Related
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- Web version — [ismail-jibrin.vercel.app/shopping](https://ismail-jibrin.vercel.app/shopping)
+- Portfolio — [ismail-jibrin.vercel.app](https://ismail-jibrin.vercel.app)
+
+---
+
+## Author
+
+**Ismail Jibrin** — Frontend Developer
+[Portfolio](https://ismail-jibrin.vercel.app) · [Email](mailto:Jubrilsmart1@gmail.com)
